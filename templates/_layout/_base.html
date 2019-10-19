@@ -16,6 +16,10 @@
 </head>
 <body class="ltr">
 
+    {% include "_core/_sub-menu" %}
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
     {% include "_core/_header" %}
 
     <main role="main" class="app-main">
@@ -26,6 +30,8 @@
     </main>
 
     {% include "_core/_footer" %}
+
+    </div>
 
     {% includeJsFile siteUrl ~ 'assets/js/app.js' %}
 </body>

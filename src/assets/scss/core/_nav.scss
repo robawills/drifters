@@ -1,0 +1,18 @@
+.nav {
+    &__a {
+        color: $white;
+        margin: 0;
+        &:hover {
+            color: $gold;
+        }
+        &:focus {
+            color: $red;
+        }
+
+        &--team:hover {
+            .drop-nav {
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.sub-nav {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__close {
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        color: $gold;
+        &:hover,:focus {
+            color: $white;
+        }
+    }
+}

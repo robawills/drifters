@@ -1,5 +1,5 @@
 <header class="header">
-    <div class="grid-container">
+    <div class="grid-container  header__bg">
         <div class="grid-x  grid-padding-x  align-justify  align-middle">
             <div class="cell  shrink  medium-2">
                 <h1>D</h1>
@@ -10,8 +10,10 @@
                 </ul>
             </nav>
             <div class="cell  shrink  medium-2  text-right">
-                <p>m</p>
+                <button type="button" class="button" data-toggle="offCanvas">MENU</button>
             </div>
         </div>
     </div>
+    {% include "_core/_drop-nav" %}
 </header>
+

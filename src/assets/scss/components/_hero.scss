@@ -1,0 +1,19 @@
+.hero {
+    min-height: 95vh;
+    background-color: $dark-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--bottom {
+        justify-content: flex-end;
+    }
+
+    &__title {
+        margin: 5rem 0;
+        color: $white;
+        @include breakpoint (medium) {
+            margin: 10rem 0;
+        }
+    }
+}
