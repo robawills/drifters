@@ -21790,6 +21790,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var what_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! what-input */ "./node_modules/what-input/dist/what-input.js");
 /* harmony import */ var what_input__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(what_input__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_sub_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/_sub-menu.js */ "./src/assets/js/modules/_sub-menu.js");
 
  // Foundation JS relies on a global varaible. In ES6, all imports are hoisted
 // to the top of the file so if we used`import` to import Foundation,
@@ -21805,6 +21806,34 @@ __webpack_require__(/*! foundation-sites */ "./node_modules/foundation-sites/dis
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  Object(_modules_sub_menu_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+});
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/_sub-menu.js":
+/*!********************************************!*\
+  !*** ./src/assets/js/modules/_sub-menu.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var submenu = function submenu() {
+  var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '#team-a';
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(selector).click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.drop-nav').toggleClass('drop-nav--show'); // $('.c-hero__bg').toggleClass('c-hero__bg--none');
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (submenu);
 
 /***/ }),
 

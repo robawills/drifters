@@ -47,8 +47,10 @@
 \*----------------------------------------------------------------------------*/
 
 @import 'components/button';              //  Button styling.
-@import 'components/hero';                 //  Hero styling.
+@import 'components/hero';                //  Hero styling.
 @import 'components/h-intro';             //  h-intro styling.
+@import 'components/results';             //  Results styling.
+@import 'components/h-news';              //  Home news styling.
 
 
 
@@ -62,6 +64,8 @@
 \*----------------------------------------------------------------------------*/
 
 @import 'helpers/alignment';              //  alignment.
+@import 'helpers/color';                  //  Color.
+@import 'helpers/font';                   //  Font.
 
 
 

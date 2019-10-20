@@ -1,19 +1,12 @@
 .drop-nav {
+  display: none;
 
-    display: none;
+  &:hover {
+    display: flex;
+  }
 
-    &__bg {
-        background: $gold;
-        padding: 0.5rem 0;
-    }
-
-    &__menu {
-
-        .nav__a {
-            color: $black;
-        }
-        .nav__a:hover {
-            color: $red;
-        }
-    }
+  &--show {
+    display: flex;
+    background: $gold;
+  }
 }

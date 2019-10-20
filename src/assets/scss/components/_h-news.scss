@@ -1,0 +1,19 @@
+.h-news {
+    margin: 0 0 3rem;
+
+    &__img {
+        height: 20rem;
+        background: $light-gray;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    &__text {
+        background: $black;
+        width: 70%;
+        padding: 1.5rem;
+    }
+}

@@ -12,6 +12,7 @@
     &__title {
         margin: 5rem 0;
         color: $white;
+        font-size: 3.5rem;
         @include breakpoint (medium) {
             margin: 10rem 0;
         }

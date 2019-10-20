@@ -15,3 +15,10 @@ require('foundation-sites');
 
 
 $(document).foundation();
+
+
+import submenu from './modules/_sub-menu.js';
+
+$(() => {
+    submenu();
+});
