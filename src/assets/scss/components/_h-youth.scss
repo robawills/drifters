@@ -1,0 +1,11 @@
+.h-youth {
+    &__img {
+        height: 46rem;
+        background-color: $dark-gray;
+        position: relative;
+        top: -6rem;
+    }
+    &__padding {
+        padding-left: 3rem;
+    }
+}
