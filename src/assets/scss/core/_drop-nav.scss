@@ -1,12 +1,19 @@
 .drop-nav {
   display: none;
-
-  &:hover {
-    display: flex;
-  }
+  padding: 0.5rem 0;
 
   &--show {
     display: flex;
+    flex-direction: column;
     background: $gold;
   }
+
+  &__a {
+    color: $black;
+    transition: 0.3s all;
+    &:hover {
+      color: $red;
+    }
+  }
+
 }

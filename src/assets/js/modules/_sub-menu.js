@@ -7,6 +7,11 @@ const submenu = (selector = '#team-a') => {
         // $('.c-hero__bg').toggleClass('c-hero__bg--none');
     });
     
+    $('.app-main').click(function() {
+        $('.drop-nav').removeClass('drop-nav--show')
+        // $('.c-hero__bg').toggleClass('c-hero__bg--none');
+    });
+    
 }
 
 export default submenu;

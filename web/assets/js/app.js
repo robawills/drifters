@@ -21831,6 +21831,9 @@ var submenu = function submenu() {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(selector).click(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.drop-nav').toggleClass('drop-nav--show'); // $('.c-hero__bg').toggleClass('c-hero__bg--none');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.app-main').click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.drop-nav').removeClass('drop-nav--show'); // $('.c-hero__bg').toggleClass('c-hero__bg--none');
+  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (submenu);
