@@ -1,0 +1,18 @@
+.footer {
+    padding: 5rem 0;
+    background-color: $light-gray;
+
+    &__boarder {
+        border-bottom: 1px solid $black;
+        @include breakpoint(medium) {
+            border-right: 1px solid $black;
+            border-bottom: none;
+        }
+    }
+
+    &__menu {
+        .nav__a {
+            color: $black;
+        }
+    }
+}

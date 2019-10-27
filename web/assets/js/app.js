@@ -21791,6 +21791,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var what_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! what-input */ "./node_modules/what-input/dist/what-input.js");
 /* harmony import */ var what_input__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(what_input__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_sub_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/_sub-menu.js */ "./src/assets/js/modules/_sub-menu.js");
+/* harmony import */ var _modules_menu_i_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/_menu-i.js */ "./src/assets/js/modules/_menu-i.js");
 
  // Foundation JS relies on a global varaible. In ES6, all imports are hoisted
 // to the top of the file so if we used`import` to import Foundation,
@@ -21810,6 +21811,37 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   Object(_modules_sub_menu_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  Object(_modules_menu_i_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
+});
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/_menu-i.js":
+/*!******************************************!*\
+  !*** ./src/assets/js/modules/_menu-i.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var menui = function menui() {
+  var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '[data-toggle="offCanvas"]';
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(selector).click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu-i').addClass('is-active');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-off-canvas-overlay, [data-close]').click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu-i').removeClass('is-active');
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (menui);
 
 /***/ }),
 

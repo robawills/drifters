@@ -22,3 +22,9 @@ import submenu from './modules/_sub-menu.js';
 $(() => {
     submenu();
 });
+
+import menui from './modules/_menu-i.js';
+
+$(() => {
+    menui();
+});

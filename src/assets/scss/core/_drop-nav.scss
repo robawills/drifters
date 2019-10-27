@@ -1,11 +1,14 @@
 .drop-nav {
   display: none;
-  padding: 0.5rem 0;
 
   &--show {
     display: flex;
     flex-direction: column;
+  }
+
+  &__bg {
     background: $gold;
+    padding: 0.5rem 0;
   }
 
   &__a {
