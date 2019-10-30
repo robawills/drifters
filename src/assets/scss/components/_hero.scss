@@ -5,6 +5,10 @@
     flex-direction: column;
     justify-content: center;
 
+    &--small {
+        min-height: 70vh;
+    }
+
     &--bottom {
         justify-content: flex-end;
     }
@@ -16,5 +20,10 @@
         @include breakpoint (medium) {
             margin: 10rem 0;
         }
+    }
+
+    &__container {
+        width: 100%;
+        text-align: left;
     }
 }
