@@ -3,9 +3,9 @@
     background-color: $light-gray;
 
     &__boarder {
-        border-bottom: 1px solid $black;
+        border-bottom: 2px solid $black;
         @include breakpoint(medium) {
-            border-right: 1px solid $black;
+            border-right: 2px solid $black;
             border-bottom: none;
         }
     }

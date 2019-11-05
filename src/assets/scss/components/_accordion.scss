@@ -1,19 +1,43 @@
 .accordion {
     background: none;
-    border: none;
+    border: 1px solid $white;
     color: $white;
+    margin-bottom: 6rem;
+
+    &__ul {
+        list-style: none;
+        font-size: 1.5rem;
+        padding: 0 3rem;
+    }
 }
 
 .accordion-title {
     background: none;
     border: none;
+    border-top: 1px solid $white;
     color: $white;
+    transition: all 0.3s;
+
     &:hover {
         background: none;
+        color: $gold;
+        &.accordion-title::before {
+            background-color: $red;
+            color: $white;
+        }
     }
     &:focus {
-        background: $dark-gray;
+        background: $black;
+        color: $gold;
+        &.accordion-title::before {
+            background-color: $red;
+            color: $white;
+        }
     }
+}
+
+.accordion-title::before .is-active {
+    color: $black;
 }
 
 .accordion-content {
@@ -22,6 +46,28 @@
     color: $white;
 }
 
+
+.accordion-item:first-child > :first-child {
+    border-top: none;
+}
+
 :last-child:not(.is-active) > .accordion-title {
     border-bottom: none;
+}
+
+.accordion-title::before {
+    width: 2rem;
+    height: 2rem;
+    background-color: $gold;
+    position: absolute;
+    top: 27%;
+    right: 3rem;
+    margin-top: 0;
+    content: '+';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    color: $black;
 }

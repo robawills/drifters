@@ -14,10 +14,17 @@
                     </h1>
                     {% endif %}
 
-                    <p class="h-into__p">Welcome to the official Drifters Rugby Football Club website. We are a friendly rugby union club, situated in Farnham Common on the Buckinghamshire/Berkshire border between Beaconsfield and Slough.Welcome to the official Drifters Rugby Football Club website. We are a friendly rugby union club, situated in Farnham Common on the Buckinghamshire/Berkshire border between Beaconsfield and Slough.</p>
+                    <p class="h-into__p">All new players welcome. Contact a member of staff below or feel free to turn up at a training session.</p>
+
+                    <p class="h-into__p">Drifters 1st XV play in Southern Counties North.</p>
                     
                     {% if craft.request.getUrl() in urls %}
                     <p><a href="#" class="bold  gold">Read more</a></p>
+
+                    {% else %}
+
+                    <button class="button  caps">View league table</button>
+
                     {% endif %}
                 </div>
             </div>
