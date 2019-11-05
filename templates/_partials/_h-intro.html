@@ -3,14 +3,22 @@
         <div class="grid-x  grid-padding-x">
             <div class="cell  medium-5">
                 <div class="h-intro__sponsers  trans-mid">
-                    <h4 class="black">Club Sponsers</h4>
+                    {% if craft.request.getUrl() in urls %}
+                        <h4 class="black">Club Sponsers</h4>
+                    {% endif %}
                 </div>
                 <div class="trans-mid">
+                    {% if craft.request.getUrl() in urls %}
                     <h1 class="caps  light  gold">
                         <span class="bold">Drifters</span> RFC
                     </h1>
-                    <p>Welcome to the official Drifters Rugby Football Club website. We are a friendly rugby union club, situated in Farnham Common on the Buckinghamshire/Berkshire border between Beaconsfield and Slough.</p>
+                    {% endif %}
+
+                    <p class="h-into__p">Welcome to the official Drifters Rugby Football Club website. We are a friendly rugby union club, situated in Farnham Common on the Buckinghamshire/Berkshire border between Beaconsfield and Slough.Welcome to the official Drifters Rugby Football Club website. We are a friendly rugby union club, situated in Farnham Common on the Buckinghamshire/Berkshire border between Beaconsfield and Slough.</p>
+                    
+                    {% if craft.request.getUrl() in urls %}
                     <p><a href="#" class="bold  gold">Read more</a></p>
+                    {% endif %}
                 </div>
             </div>
             {% include "_partials/_results" %} 

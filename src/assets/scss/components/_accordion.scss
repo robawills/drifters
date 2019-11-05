@@ -1,0 +1,27 @@
+.accordion {
+    background: none;
+    border: none;
+    color: $white;
+}
+
+.accordion-title {
+    background: none;
+    border: none;
+    color: $white;
+    &:hover {
+        background: none;
+    }
+    &:focus {
+        background: $dark-gray;
+    }
+}
+
+.accordion-content {
+    background: none;
+    border: none;
+    color: $white;
+}
+
+:last-child:not(.is-active) > .accordion-title {
+    border-bottom: none;
+}

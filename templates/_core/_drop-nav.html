@@ -2,13 +2,11 @@
     <div class="grid-x  grid-padding-x  align-center  drop-nav__bg">
         <div class="cell  shrink">
             <ul class="menu  align-center  drop-nav__menu">
-                <li><a href="#" class="drop-nav__a">1st XV</a></li>
-                <li><a href="#" class="drop-nav__a">2nd XV</a></li>
-                <li><a href="#" class="drop-nav__a">Colts</a></li>
-                <li><a href="#" class="drop-nav__a">U16</a></li>
-                <li><a href="#" class="drop-nav__a">U15</a></li>
-                <li><a href="#" class="drop-nav__a">U13</a></li>
-                <li><a href="#" class="drop-nav__a">Minis</a></li>
+
+                {% for entry in craft.entries.section('teams') %}
+                    <li><a href="{{ entry.url }}" class="drop-nav__a">{{ entry.title }}</a></li>
+                {% endfor %}
+                
             </ul>
         </div>
     </div>
