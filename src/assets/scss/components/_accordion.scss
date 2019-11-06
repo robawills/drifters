@@ -3,11 +3,25 @@
     border: 1px solid $white;
     color: $white;
     margin-bottom: 6rem;
+    margin-top: 2rem;
 
     &__ul {
         list-style: none;
         font-size: 1.5rem;
-        padding: 0 3rem;
+        margin: 0 3rem;
+        &--small {
+            font-size: 1.25rem;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            border-bottom: 1px solid $medium-gray;
+        }
+        &--small:first-child {
+            padding-top: 0;
+        }
+        &--small:last-child {
+            border-bottom: none;
+            padding-bottom: 2rem;
+        }
     }
 }
 
@@ -70,4 +84,9 @@
     align-items: center;
     font-size: 1.25rem;
     color: $black;
+}
+
+
+li span {
+    margin: 0 1rem;
 }
