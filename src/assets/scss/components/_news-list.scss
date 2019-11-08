@@ -1,0 +1,14 @@
+.news-list {
+    padding-bottom: 4.5rem;
+    &__item {
+        margin: 4.5rem 0 0;
+    }
+    &__img {
+        height: 16rem;
+        background: $light-gray;
+        margin-bottom: 1.5rem;
+    }
+    &__title {
+        font-size: 1.25rem;
+    }
+}
