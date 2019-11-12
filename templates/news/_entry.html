@@ -1,0 +1,33 @@
+{#
+ # News item template
+ # ---------------
+#}
+
+{% extends "_layout/_base" %}
+{% block content %}
+
+{% include "_partials/_hero-n" %} 
+
+<section class="news-item  bg-white  black">
+    <div class="grid-container">
+        <div class="grid-x  grid-padding-x">
+            <div class="cell  small-12  medium-6  black">
+                <h1 class="news-item__title  bold">
+                    U16 BUCKS PLATE FINAL:<br>
+                    DRIFTERS 22-12 AYLESBURY
+                </h1>
+                <p class="news-item__sub-title  reg">Drifters win Bucks Plate for 2nd time in 3 years.</p>
+                <hr class="news-item__hr">
+                <p class="reg">The Drifters U16 team, playing in their 3rd Plate Final in as many years won a hard fought game 22-12 against a strong Aylesbury team.</p>
+                <p class="news-item__date">28TH APRIL 2019</p>
+            </div>
+            <div class="cell  small-12  medium-6">
+                <div class="news-item__img"></div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
