@@ -1,13 +1,42 @@
 .assets {
+
+    &__border {
+        border-top: 1px solid $black;
+        padding-top: 4.5rem;
+    }
+
+    &__border--r {
+        border-right: 1px solid $black;
+        
+    }
+
+    &__padding {
+        padding-left: 3.5rem;
+    }
+
     &__icon {
         width: 4.5rem;
         height: 4.5rem;
         border: 3px solid $gold;
         border-radius: 50%;
+        &--square {
+            border-radius: 0;
+            width: 3rem;
+            height: 3rem;
+            border: none;
+        }
     }
     &__title {
-        margin: 0;
+        margin: 0 0 2.25rem;
+        font-size: 1.5rem;
+    }
+    &__s-title {
         font-size: 1.25rem;
+        margin: 0 1.5rem;
+    }
+
+    &__break {
+        padding: 0 1rem;
     }
 
     &__item {
