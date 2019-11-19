@@ -1,18 +1,17 @@
 {% switch entry.section.handle %}  
-{% case 'pages' %}
-<section class="hero  hero--small  hero--bottom  text-center">
 {% case 'teams' %}
 <section class="hero  hero--small  text-center">
+{% default %}
+<section class="hero  hero--small  hero--bottom  text-center">
 {% endswitch %}
-
     <div class="grid-container  hero__container">
         <div class="grid-x  grid-padding-x">
             <div class="cell  small-12">
                 {% switch entry.section.handle %}  
-                    {% case 'pages' %}
-                        <h1 class="gold  bold  caps">{{ entry.title }}</h1>
-                    {% case 'teams' %}
+                {% case 'teams' %}
                         <h1 class="caps"><span class="bold  gold">DRIFTERS RFC</span> {{ entry.title }}</h1>
+                {% default %}
+                    <h1 class="gold  bold  caps">{{ entry.title }}</h1>
                 {% endswitch %}
             </div>
         </div>
