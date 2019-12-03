@@ -1,23 +1,84 @@
 
+{# {% set visibleHouses = [] %} #}
+
+
+{# Loop all the home types, and add it to our `visibleHouses` array if the plot is not `hidden` #}
+{# {% for homeType in entry.developmentHomeTypes.type('houseType') %} #}
+
+    {# Create an empty array called `plots`. We'll push to this with any plots that aren't `hidden` #}
+    {# {% set plots = [] %} #}
+
+    {# Loop the plots within the house type, and push to our `plots` array for each plot that is not `hidden` #}
+    
+    {# {% for plot in homeType.plots if not plot.hidden %}
+        {% set plots = plots|merge([plot]) %}
+    {% endfor %} #}
+
+    {# Now we push the `homeType` and the array of plots to our `visibleHouses` array #}
+    {# {% if plots|length %}
+        {% set visibleHouses = visibleHouses|merge( [{ 'homeType': homeType, 'plots': plots }] ) %}
+    {% endif %}
+
+{% endfor %} #}
+
+
+
+{% set gamesPlayed = [] %}
+
+{# Loop through fixtures in month block #}
+{% for block in entry.fixtures %}
+
+    {# Loop through months to find games played #}
+    {% for row in block.games %}
+
+        {# Now we push the games with a home score to the array `gamesPlayed` #}
+        {% if row.homePoints|length %}
+            {# {{ row.homePoints }} #}
+
+            {% set gamesPlayed = gamesPlayed|merge([gamesPlayed]) %}
+            
+        {% endif %}
+
+    {% endfor %}
+
+{% endfor %}
+
+
+
 <article class="cell  medium-7  large-6  large-offset-1  results">
     <h1 class="caps  light  gold  results__title">RESULTS</h1>
     <table class="results__table  unstriped">
         <tbody class="results__tbody">
 
             <!--I want to display the last 3 games with results-->
+            
+            {% if gamesPlayed|length %}
 
+                {% for block in entry.fixtures %}
+                
+                    {% for row in block.games %}
+                    
+                        <tr class="results__tr">
+                            <td class="results__td">
+                                <h3>
+                                    XV 50 —  0
+                                </h3>
+                            </td>
+                            <td class="results__td  results__td--r">Sat 6 Oct 15:00<br>South West Division</td>
+                        </tr>
+                        
+                    {% endfor %}
+                    
+                {% endfor %}
 
-            <tr class="results__tr">
-                <td class="results__td">
-                    <h3>
-                         XV 50 —  0
-                    </h3>
-                </td>
-                <td class="results__td  results__td--r">Sat 6 Oct 15:00<br>South West Division</td>
-            </tr>
+            {% endif %}
+            
+            
         </tbody>
     </table>
+
     {% if craft.request.getUrl() in urls %}
         <button type="button" class="button  button--right">View results</button>
     {% endif %}
+    
 </article>

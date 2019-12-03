@@ -18,7 +18,7 @@
                     </a>
                     
                     <div class="accordion-content" data-tab-content>
-                        {% for row in block.fixtures %}
+                        {% for row in block.games %}
                         <ul class="accordion__ul  accordion__ul--small  grid-x  grid-padding-x  align-justify">
                             <li class="cell  shrink">
                                 {{ row.date }} - {{ row.ko }}
@@ -27,8 +27,7 @@
                                 {{ row.homeTeam }} 
                                 <span>
                                     {% if row.homePoints|length %}
-                                    
-                                        
+                                        {{ row.homePoints }}
                                     {% else %}
                                         0 
                                     {% endif %}
