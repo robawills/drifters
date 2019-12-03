@@ -43,6 +43,8 @@
 
 {% endfor %}
 
+{# {{ dump(gamesPlayed) }} #}
+
 
 
 <article class="cell  medium-7  large-6  large-offset-1  results">
@@ -52,11 +54,11 @@
 
             <!--I want to display the last 3 games with results-->
             
-            {% if gamesPlayed|length %}
+            {% for row in gamesPlayed if gamesPlayed|length %}
 
-                {% for block in entry.fixtures %}
+                {# {% for block in entry.fixtures %}
                 
-                    {% for row in block.games %}
+                    {% for row in block.games %} #}
                     
                         <tr class="results__tr">
                             <td class="results__td">
@@ -67,11 +69,11 @@
                             <td class="results__td  results__td--r">Sat 6 Oct 15:00<br>South West Division</td>
                         </tr>
                         
-                    {% endfor %}
+                    {# {% endfor %}
                     
-                {% endfor %}
+                {% endfor %} #}
 
-            {% endif %}
+            {% endfor %}
             
             
         </tbody>
