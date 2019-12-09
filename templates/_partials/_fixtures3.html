@@ -1,0 +1,18 @@
+
+{# Create a new Super Table block query #}
+{% set mySuperTableBlockQuery = craft.superTable.blocks()
+    .fieldId(42) %}
+
+{# Fetch the Super Table blocks #}
+{% set superTableBlocks = mySuperTableBlockQuery.all() %}
+{% set matrixField = craft.fields.getFieldByHandle('game') %}
+
+{# Display their contents #}
+{% for block in superTableBlocks %}
+    <h1>Month</h1>
+
+    {% for row in block.month %}
+        <h3>Game</h3>
+    {% endfor %}
+
+{% endfor %}

@@ -28,7 +28,11 @@
                     {% endif %}
                 </div>
             </div>
-            {% include "_partials/_results" %} 
+            {% if craft.request.getUrl() in urls %}
+                {% include "_partials/_home-results" %} 
+            {% else %}
+                {% include "_partials/_results" %} 
+            {% endif %}
         </div>
     </div>
 </section>

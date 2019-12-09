@@ -1,4 +1,10 @@
+{# Create a new Super Table block query #}
+{% set mySuperTableBlockQuery = craft.superTable.blocks()
+    .fieldId(42) %}
 
+{# Fetch the Super Table blocks #}
+{% set superTableBlocks = mySuperTableBlockQuery.all() %}
+{% set matrixField = craft.fields.getFieldByHandle('game') %}
 
 <section class="grid-container">
     <div class="grid-x  grid-padding">
@@ -7,48 +13,46 @@
 
             <ul class="accordion" data-accordion data-allow-all-closed="true">
                 
-                {% for block in entry.fixtures %}
+                {# Display their contents #}
+                {% for block in superTableBlocks %}
+
                 <li class="accordion-item" data-accordion-item>
+
                     <a href="#" class="accordion-title">
                         <ul class="accordion__ul  grid-x  grid-padding-x">
-                            <li class="cell  auto">{{ block.monthTitle }}</li>
-                            <li class="cell  auto">{{ block.year }}</li>
-                            <li class="cell  auto">{{ block.numberOfGames }} Matches</li>
+                            <li class="cell  auto">Month</li>
+                            <li class="cell  auto">Year</li>
+                            <li class="cell  auto">3 Matches</li>
                         </ul>
                     </a>
                     
                     <div class="accordion-content" data-tab-content>
-                        {% for row in block.games %}
+                        {% for row in block.month %}
                         <ul class="accordion__ul  accordion__ul--small  grid-x  grid-padding-x  align-justify">
+                            
                             <li class="cell  shrink">
-                                {{ row.date }} - {{ row.ko }}
+                                DATE - KO
                             </li>
                             <li class="cell  shrink">
-                                {{ row.homeTeam }} 
+                                Home team
                                 <span>
-                                    {% if row.homePoints|length %}
-                                        {{ row.homePoints }}
-                                    {% else %}
-                                        0 
-                                    {% endif %}
+                                    
+                                    0 
                                     - 
-                                    {% if row.awayPoints|length %}
-                                        {{ row.awayPoints }}
-                                    {% else %}
-                                        0 
-                                    {% endif %}
+                                    0 
+                                    
                                 </span> 
-                                {{ row.awayTeam }}
+                                Away team
                             </li>
                             <li class="cell  shrink">
-                                {{ row.competition }}
+                                Comp
                             </li>
                         </ul>
                         {% endfor %}
-                        
                     </div>
                 </li>
                 {% endfor %}
+                
 
             </ul>
 
