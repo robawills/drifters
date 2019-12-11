@@ -17,38 +17,44 @@
                 {% for block in superTableBlocks %}
 
                 <li class="accordion-item" data-accordion-item>
-
+                    
+                    {% for row in block.month if row.gameMonth | length %}
                     <a href="#" class="accordion-title">
                         <ul class="accordion__ul  grid-x  grid-padding-x">
-                            <li class="cell  auto">Month</li>
-                            <li class="cell  auto">Year</li>
-                            <li class="cell  auto">3 Matches</li>
+                            <li class="cell  auto">{{ row.gameMonth }}</li>
+                            <li class="cell  auto">{{ row.gameYear }}</li>
+                            <li class="cell  auto">{{ row.numberOfGames }} Matches</li>
                         </ul>
                     </a>
+                    {% endfor %}
+                    
+                    
+                    
                     
                     <div class="accordion-content" data-tab-content>
-                        {% for row in block.month %}
+                        {% for row in block.month if not row.gameMonth | length %}
                         <ul class="accordion__ul  accordion__ul--small  grid-x  grid-padding-x  align-justify">
                             
                             <li class="cell  shrink">
-                                DATE - KO
+                                {{ row.gameDate }} - {{ row.gameKo }}
                             </li>
                             <li class="cell  shrink">
-                                Home team
+                                {{ row.gameHomeTeam }}
                                 <span>
                                     
-                                    0 
+                                    {{row.homeTeamPoints}}
                                     - 
-                                    0 
+                                    {{row.awayTeamPoints}} 
                                     
                                 </span> 
-                                Away team
+                                {{row.gameAwayTeam}}
                             </li>
                             <li class="cell  shrink">
-                                Comp
+                                {{row.competition}}
                             </li>
                         </ul>
                         {% endfor %}
+
                     </div>
                 </li>
                 {% endfor %}
