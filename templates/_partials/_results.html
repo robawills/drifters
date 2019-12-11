@@ -3,12 +3,12 @@
     <table class="results__table  unstriped">
         <tbody class="results__tbody">
             {% for row in entry.fixturesSuperTable.all() %}
-                {% for block in row.month.limit(2) %}
+                {% for block in row.month.limit(3) %}
                     {% if block.gamePlayed|length %}
                         <tr class="results__tr">
                             <td class="results__td">
                                 <h3>
-                                      XV 50 —  0
+                                    {{ block.gameHomeTeam }} {{block.homeTeamPoints}} —  {{block.awayTeamPoints}} {{block.gameAwayTeam}}
                                 </h3>
                             </td>
                             <td class="results__td  results__td--r">Sat 6 Oct 15:00<br>South West Division</td>
