@@ -1,5 +1,5 @@
 
-{% for entry in craft.entries.section('pages') %}
+{% for entry in craft.entries.section('pages').all() %}
     <li class="nav__li">
         <a href="{{ entry.url }}" class="nav__a">{{ entry.title }}</a>
     </li>
