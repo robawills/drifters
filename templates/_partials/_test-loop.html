@@ -1,85 +1,42 @@
-
-{# {{ dump(gamesPlayed) }} #}
-
-
-{% set gamesPlayed = [] %}
-{% for block in entry.fixturesMatrix.all() %}
-    {% for row in block.gamesTable %}
-        
-        {% set gamesPlayed = gamesPlayed|merge([gamesPlayed]) %}
-        
-    {% endfor %}
-{% endfor %}
-
 <div class="grid-container">
-    <div class="grid-x  grid-padding-x">
-
+    <div class="grid-x grid-padding-x">
         <div class="cell small-6">
-
-            {% for game in gamesPlayed %}
-                
-                <h5>Game</h5>
-                <h5>{{entry.id}}</h5>
-                
-            {% endfor %}
-        </div>
-        
-        <div class="cell small-6">
-            {% for block in entry.fixturesMatrix.all() %}
-                {{block.fieldId}}
-                <h1>Month</h1>
-                {% for row in block.gamesTable %}
-                
-                    <h5>{{row.homeTeam}}</h5>
-                    <h5>{{row.awayTeam}}</h5>
-                    <br><br>
+            <h1>Last 3 played games</h1>
+            {% set playedGames = 0 %}
+            {% for fixture in entry.fixtures.type('fixture').order('sortOrder desc') %}
+                {% for game in fixture.games|reverse if (game.played and playedGames < 3) %}
+                    {% set playedGames = playedGames + 1 %}
+                    <div class="grid-x  grid-padding-x">
+                        <div class="cell small-6">
+                            {{ game.homeTeam }}
+                        </div>
+                        <div class="cell small-6">
+                            {{ game.awayTeam }}
+                        </div>
+                    </div>
                 {% endfor %}
-                    
             {% endfor %}
-            
         </div>
-
+        <div class="cell small-6">
+            <h1>Fixtures by month</h1>
+            {% for fixture in entry.fixtures.type('fixture') %}
+                <div class="grid-x  grid-padding-x">
+                    <div class="cell">
+                        <h2>{{ fixture.month.label }}</h2>
+                    </div>
+                </div>
+                {% for game in fixture.games|slice(0, 3) %}
+                    <div class="grid-x  grid-padding-x">
+                        <div class="cell small-6">
+                            {{ game.homeTeam }}
+                        </div>
+                        <div class="cell small-6">
+                            {{ game.awayTeam }}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-</div> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div class="grid-container">
-    <div class="grid-x  grid-padding-x">
-
-        <div class="cell small-6">
-
-            {% for block in entry.catFixtures.all() %}
-                {% for catagory in block.catmonth.all() %}
-                    {{catagory.title}}
-                {% endfor %}
-                <h5>{{ block.catHomeTeam }}</h5>
-                <h5>{{ block.catAwayTeam }}</h5>
-                <br><br>
-            {% endfor %}
-        </div>
-        
-        <div class="cell small-6">
-            
-            {% for block in entry.catFixtures.catmonth %}
-                {% for catagory in block.catmonth.all() %}
-                    {{catagory.title}}
-                {% endfor %}
-                <h5>{{ block.catHomeTeam }}</h5>
-                <h5>{{ block.catAwayTeam }}</h5>
-                <br><br>
-            {% endfor %}     
-                     
-        </div>
-
-    </div>
-</div> 
-
-
-
-
+</div>
 
