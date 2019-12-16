@@ -2,20 +2,16 @@
     <h1 class="caps  light  gold  results__title">RESULTS</h1>
     <table class="results__table  unstriped">
         <tbody class="results__tbody">
-            {% for row in entry.fixturesSuperTable.all() %}
-                {% for block in row.month.limit(3) %}
-                    {% if block.gamePlayed|length %}
-                        <tr class="results__tr">
-                            <td class="results__td">
-                                <h3>
-                                    {{ block.gameHomeTeam }} {{block.homeTeamPoints}} —  {{block.awayTeamPoints}} {{block.gameAwayTeam}}
-                                </h3>
-                            </td>
-                            <td class="results__td  results__td--r">Sat 6 Oct 15:00<br>South West Division</td>
-                        </tr>
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
+            
+            <tr class="results__tr">
+                <td class="results__td">
+                    <h3>
+                        team 0 —  0 team
+                    </h3>
+                </td>
+                <td class="results__td  results__td--r">Sat 6 Oct 15:00<br>South West Division</td>
+            </tr>
+                    
         </tbody>
     </table>
     
