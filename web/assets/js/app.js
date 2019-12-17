@@ -21879,7 +21879,7 @@ var submenu = function submenu() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/robwills/Local Sites/drifters/app/craft/src/assets/js/app.js */"./src/assets/js/app.js");
+module.exports = __webpack_require__(/*! /Users/robwills/Local Sites/driftersrfc/app/craft/src/assets/js/app.js */"./src/assets/js/app.js");
 
 
 /***/ })
