@@ -2,20 +2,19 @@
     padding: 3rem 0 6rem;
     color: $black;
     &__img {
-        height: 20rem;
-        background: $light-gray;
         margin-top: 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
+        position: relative;
+
     }
 
     &__text {
         background: $white;
-        width: 70%;
+        min-width: 70%;
         padding-top: 1.5rem;
         padding-left: 1.5rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 
     &__title {

@@ -1,166 +1,60 @@
 <section class="players  hide-for-small-only  bg-white">
     <div class="grid-container">
+        {% if entry.coaches | length %}
         <div class="grid-x  grid-padding-x  align-middle">
+
+            {% for coach in entry.coaches %}
+
             <article class="cell  medium-4">
                 <div class="players__img">
+
+                    {% for asset in coach.coachImage %}
+                        <img src="{{ asset.Url }}" width="{{ asset.getWidth }}" height="{{ asset.getHeight }}"  alt="{{ asset.filename }}">
+                    {% endfor %}
+
                     <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__padding">
-                    <h3 class="gold">GET IN TOUCH</h3>
-                    <p class="players__contact">EMAIL: example@example.com</p>
-                    <p class="players__contact  players__contact--m0">TEL: 00000 000000</p>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
-                        <p class="gold">COACH</p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="players__img">
-                    <div class="players__text">
-                        <h1 class="players__title  bold">Tom Heeks</h1>
+                        <h1 class="players__title  bold">{{coach.coachName}}</h1>
                         <p class="gold">COACH</p>
                     </div>
                 </div>
             </article>
 
+            {% endfor %}
+            
+            <article class="cell  medium-4">
+                <div class="players__padding">
+                    <h3 class="gold">GET IN TOUCH</h3>
+                    {% for row in entry.contactDetails %}
+                    <p class="players__contact">EMAIL: {{row.coachEmail}}</p>
+                    <p class="players__contact  players__contact--m0">TEL: {{row.coachPhone}}</p>
+                    {% endfor %}
+                </div>
+            </article>
+
         </div>
+        {% endif %}
+
+        {% if entry.players | length %}
+        <div class="grid-x  grid-padding-x  align-middle">
+
+            {% for player in entry.players %}
+            <article class="cell  medium-4">
+
+                <div class="players__img">
+                    {% for asset in player.playerImage %}
+                    <img src="{{ asset.Url }}" width="{{ asset.getWidth }}" height="{{ asset.getHeight }}"  alt="{{ asset.filename }}">
+                    {% endfor %}
+                    <div class="players__text">
+                        <h1 class="players__title  bold">{{ player.playerName }}</h1>
+                        <p class="gold  caps">{{ player.playerPosition }}</p>
+                    </div>
+                </div>
+
+            </article>
+            {% endfor %}
+            
+
+        </div>
+        {% endif %}
     </div>
 </section>

@@ -33,8 +33,12 @@
                     {% if craft.request.getUrl() in urls %}
                         <p><a href="#" class="bold  gold">Read more</a></p>
                     {% else %}
-
-                    <button class="button  caps">View league table</button>
+                
+                    
+                    <a href="{{ entry.leagueTable }}" target="_blank">
+                        <button class="button  caps">View league table</button>
+                    </a>
+                    
 
                     {% endif %}
                 </div>
