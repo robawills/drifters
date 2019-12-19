@@ -1,9 +1,12 @@
 <section class="section  contact">
     <div class="grid-container">
         <div class="grid-x  grid-padding-x">
+            {% if entry.text|length %}
             <div class="cell  small-12">
-                <h1 class="contact__title">All new players welcome. Contact a member of staff below or feel free to turn up at a training session. Drifters 1st XV play in Southern Counties North.</h1>
+                <h1 class="contact__title">{{ entry.text }}</h1>
             </div>
+            {% endif %}
+            
             <div class="cell  small-12  medium-4">
                 <h3 class="contact__h2  light  caps">ADDRESS</h3>
                 <p>

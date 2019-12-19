@@ -2,13 +2,9 @@
     padding: 0 0 15rem;
 
     &__img {
-        height: 20rem;
         background: $light-gray;
         margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
+        position: relative;
     }
 
     &__text {
@@ -16,6 +12,9 @@
         width: 70%;
         padding-top: 1.5rem;
         padding-left: 1.5rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 
     &__title {

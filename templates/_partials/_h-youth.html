@@ -16,15 +16,17 @@
             </div>
 
             <div class="cell  small-12  medium-6">
+                {% for block in entry.section3.type('textBlock').all() %}
                 <div class="h-youth__padding">
-                    {% for block in entry.section3.type('textBlock').all() %}
+                    
                         <h1 class="h1  red">{{block.blockTitle}}</h1>
                         <p class="reg  black">{{block.blockText}}</p>
                         {% for entry in block.blockLink %}
-                        <a href="#" class="gold  bold">Read more</a>
+                        <a href="{{ entry.url }}" class="gold  bold">Read more</a>
                         {% endfor %}
-                    {% endfor %}
+                    
                 </div>
+                {% endfor %}
             </div>
 
         </div>

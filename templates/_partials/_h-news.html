@@ -6,33 +6,29 @@
                     LATEST NEWS
                 </h1>
             </div>
+
+            {% set news = craft.entries.section('news')
+            .orderBy('dateCreated asc')
+            .limit(3) %}
+            {% for post in news %}
+
             <article class="cell  medium-4">
-                <div class="h-news__img">
-                    <div class="h-news__text">
-                        <h1 class="h-news__title  bold">1st XV Season begins</h1>
-                        <p>2018/19 starts Sunday 2nd September</p>
-                        <p class="h-news__a"><a class="bold  gold">Read more</a></p>
+                <a href="{{ post.url }}" class="">
+                    <div class="h-news__img">
+                        {% for asset in post.image %}
+                            <img src="{{ asset.getUrl('square') }}" width="{{ asset.getWidth('square') }}" height="{{ asset.getHeight('square') }}"  alt="{{ asset.filename }}">
+                        {% endfor %}
+                        <div class="h-news__text">
+                            <h1 class="h-news__title  bold  white  caps">{{post.title}}</h1>
+                            {# <p class="white">{{post.subHeadline}}</p> #}
+                            <p class="h-news__a bold  gold">Read more</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </article>
-            <article class="cell  medium-4">
-                <div class="h-news__img">
-                    <div class="h-news__text">
-                        <h1 class="h-news__title  bold">Preseason </h1>
-                        <p>2018/19 starts Sunday 2nd September</p>
-                        <p class="h-news__a"><a class="bold  gold">Read more</a></p>
-                    </div>
-                </div>
-            </article>
-            <article class="cell  medium-4">
-                <div class="h-news__img">
-                    <div class="h-news__text">
-                        <h1 class="h-news__title  bold">Minis & juniors</h1>
-                        <p>2018/19 starts Sunday 2nd September</p>
-                        <p class="h-news__a"><a class="bold  gold">Read more</a></p>
-                    </div>
-                </div>
-            </article>
+
+            {% endfor %}
+
         </div>
     </div>
 </section>

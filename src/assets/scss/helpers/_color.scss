@@ -1,9 +1,14 @@
 .bg-black {
     background: $black;
+    
 }
 
 .bg-white {
     background: $white;
+    a {
+        color: $red;
+        font-weight: 900;
+    }
 }
 
 .bg-red {

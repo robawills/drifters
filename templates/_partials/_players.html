@@ -25,8 +25,8 @@
                 <div class="players__padding">
                     <h3 class="gold">GET IN TOUCH</h3>
                     {% for row in entry.contactDetails %}
-                    <p class="players__contact">EMAIL: {{row.coachEmail}}</p>
-                    <p class="players__contact  players__contact--m0">TEL: {{row.coachPhone}}</p>
+                    <p class="players__contact">Email: <a class="black" href="mailto:{{row.coachEmail}}">{{row.coachEmail}}</a></p>
+                    <p class="players__contact  players__contact--m0">Telephone: {{row.coachPhone}}</p>
                     {% endfor %}
                 </div>
             </article>

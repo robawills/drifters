@@ -12,15 +12,20 @@
     <div class="grid-container">
         <div class="grid-x  grid-padding-x">
             
-            {% set test = craft.entries.section('news')
-                    .orderBy('dateCreated asc')
-                    .all() %}
-
-            {% for entry in test %}
+            {% set news = craft.entries.section('news')
+            .orderBy('dateCreated asc')
+            .all() %}
+            {% for entry in news %}
             
             <article class="cell  small-12  medium-4  news-list__item">
                 <a href="{{ entry.url }}">
-                    <div class="news-list__img"></div>
+
+                    <div class="news-list__img">
+                        {% for asset in entry.image %}
+                        <img src="{{ asset.getUrl('rectangle') }}" width="{{ asset.getWidth('rectangle') }}" height="{{ asset.getHeight('rectangle') }}"  alt="{{ asset.filename }}">
+                        {% endfor %}
+                    </div>
+
                     <h1 class="news-list__title  black">{{ entry.title }}</h1>
                     <p class="bold  gold">Read more</p>
                 </a>

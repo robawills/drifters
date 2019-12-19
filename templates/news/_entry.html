@@ -13,16 +13,17 @@
         <div class="grid-x  grid-padding-x">
             <div class="cell  small-12  medium-6  black">
                 <h1 class="news-item__title  bold">
-                    U16 BUCKS PLATE FINAL:<br>
-                    DRIFTERS 22-12 AYLESBURY
+                    {{ entry.headline }}
                 </h1>
-                <p class="news-item__sub-title  reg">Drifters win Bucks Plate for 2nd time in 3 years.</p>
+                <p class="news-item__sub-title  reg">{{ entry.subHeadline }}</p>
                 <hr class="news-item__hr">
-                <p class="reg">The Drifters U16 team, playing in their 3rd Plate Final in as many years won a hard fought game 22-12 against a strong Aylesbury team.</p>
-                <p class="news-item__date">28TH APRIL 2019</p>
+                <p class="reg">{{ entry.text }}</p>
+                <p class="news-item__date caps">{{ entry.postDate|date }}</p>
             </div>
             <div class="cell  small-12  medium-6">
-                <div class="news-item__img"></div>
+                {% for asset in entry.image %}
+                <img src="{{ asset.getUrl }}" width="{{ asset.getWidth }}" height="{{ asset.getHeight }}"  alt="{{ asset.filename }}">
+                {% endfor %}
             </div>
             
         </div>
