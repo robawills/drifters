@@ -1,12 +1,16 @@
 {% switch entry.section.handle %}  
 {% case 'teams' %}
+
 {% for asset in entry.backgroundImage %}
 <section class="hero  hero--small  text-center" style="background-image: url('{{ asset.url }}');">
 {% endfor %}
+
 {% default %}
+
 {% for asset in entry.backgroundImage %}
 <section class="hero  hero--small  hero--bottom  text-center"  style="background-image: url('{{ asset.url }}');">
 {% endfor %}
+
 {% endswitch %}
     <div class="grid-container  hero__container">
         <div class="grid-x  grid-padding-x">
