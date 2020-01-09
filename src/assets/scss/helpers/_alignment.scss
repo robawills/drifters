@@ -1,3 +1,7 @@
 .trans-mid {
-    transform: translate(0, -50%);
+    margin-top: 2rem;
+    @include breakpoint(medium) {
+        margin-top: 0;;
+        transform: translate(0, -50%);
+    }
 }

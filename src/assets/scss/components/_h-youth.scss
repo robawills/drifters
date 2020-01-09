@@ -1,15 +1,17 @@
 .h-youth {
     &__img {
-        height: 46rem;
         background-color: $dark-gray;
         position: relative;
         top: -6rem;
     }
     &__padding {
-        padding-left: 3rem;
         position: relative;
         top: -3rem;
         padding-bottom: 1rem;
+
+        @include breakpoint(medium) {
+            padding-left: 3rem;
+        }
     }
     &__title {
         margin-top: 2.5rem;

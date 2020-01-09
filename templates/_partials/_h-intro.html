@@ -3,7 +3,7 @@
         <div class="grid-x  grid-padding-x">
             <div class="cell  medium-5">
                 {% if craft.request.getUrl() in urls %}
-                <div class="h-intro__sponsers  trans-mid">
+                <div class="h-intro__sponsers  trans-mid  hide-for-small-only">
                     <h4 class="black">Club Sponsors</h4>
                     {% for asset in entry.mainSponsors %}
                         <img src="{{ asset.Url }}" width="{{ asset.getWidth }}" height="{{ asset.getHeight }}"  alt="{{ asset.filename }}">
