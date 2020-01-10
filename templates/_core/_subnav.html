@@ -1,4 +1,13 @@
-{% include "_core/_nav" %}
+
+<li class="nav__li  show-for-small-only">
+    <a class="nav__a" href="{{ siteUrl }}">Home</a>
+</li>
+<li class="nav__li  show-for-small-only">
+    <a class="nav__a" href="{{ siteUrl }}news">News</a>
+</li>
+<li class="nav__li  show-for-small-only">
+    <a class="nav__a" href="{{ siteUrl }}contact">Contact</a>
+</li>
 
 {% for entry in craft.entries.section('pages').all() %}
     <li class="nav__li">

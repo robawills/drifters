@@ -17,4 +17,12 @@
         margin-top: 2.5rem;
     }
 
+    &__a {
+        color: $gold !important;
+        transition: all 0.3s;
+        &:hover {
+            color: $red !important;
+        }
+    }
+
 }

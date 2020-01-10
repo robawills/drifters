@@ -1,8 +1,8 @@
-{% if entry.sponsors | length %}
+{% if sponsors.sponsors | length %}
 <section class="section  section__pt0  bg-white  black">
     <div class="grid-container">
-        <div class="grid-x  grid-margin-x  sponsers  text-center">
-            {% for asset in entry.sponsors %}
+        <div class="grid-x  grid-margin-x  sponsers  text-center  align-middle">
+            {% for asset in sponsors.sponsors %}
             <div class="cell  small-6  medium-3  sponsers__item">
                 <img src="{{ asset.Url }}" width="{{ asset.getWidth }}" height="{{ asset.getHeight }}"  alt="{{ asset.filename }}">
             </div>

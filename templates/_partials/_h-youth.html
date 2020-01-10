@@ -19,10 +19,10 @@
                 {% for block in entry.section3.type('textBlock').all() %}
                 <div class="h-youth__padding">
                     
-                        <h1 class="h1  red">{{block.blockTitle}}</h1>
+                        <h1 class="h1  red  light">{{block.blockTitle}}</h1>
                         <p class="reg  black">{{block.blockText}}</p>
                         {% for entry in block.blockLink %}
-                        <a href="{{ entry.url }}" class="gold  bold">Read more</a>
+                        <a href="{{ entry.url }}" class="h-youth__a  gold  bold">Read more</a>
                         {% endfor %}
                     
                 </div>
