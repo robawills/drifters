@@ -1,0 +1,23 @@
+.social {
+    
+    border: 2px solid $gold;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 400;
+    color: $white;
+    transition: all 0.3s;
+
+    &--footer {
+        color: $black; 
+    }
+
+    &:hover {
+        background-color: $gold;
+        color: $white;
+    }
+}
