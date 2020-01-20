@@ -28,3 +28,8 @@ import menui from './modules/_menu-i.js';
 $(() => {
     menui();
 });
+
+import aos from './modules/_aos.js';
+$(() => {
+    aos();
+});
