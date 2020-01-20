@@ -1,7 +1,18 @@
 .trans-mid {
-    margin-top: 2rem;
+    // margin-top: 2rem;
+
     @include breakpoint(medium) {
-        margin-top: 0;;
+        margin-top: 0;
         transform: translate(0, -50%);
+        &--ani {
+            animation: 2s sponsers;
+        }
+        
     }
+}
+
+@keyframes sponsers {
+    0% {margin-top: 5rem;opacity: 0;}
+    50% {margin-top: 5rem;opacity: 0;}
+    100% {margin-top: 0;opacity: 1;}
 }

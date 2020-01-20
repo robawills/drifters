@@ -5,7 +5,7 @@
 
             {% for coach in entry.coaches %}
 
-            <article class="cell  medium-4">
+            <article class="cell  medium-4"   data-aos="fade-up" data-aos-duration="600">
                 <div class="players__img">
 
                     {% for asset in coach.coachImage %}
@@ -21,7 +21,7 @@
 
             {% endfor %}
             
-            <article class="cell  medium-4">
+            <article class="cell  medium-4"   data-aos="fade-left" data-aos-duration="600">
                 <div class="players__padding">
                     <h3 class="gold">GET IN TOUCH</h3>
                     {% for row in entry.contactDetails %}
@@ -38,7 +38,7 @@
         <div class="grid-x  grid-padding-x  align-middle">
 
             {% for player in entry.players %}
-            <article class="cell  medium-4">
+            <article class="cell  medium-4"   data-aos="fade-up" data-aos-duration="600">
 
                 <div class="players__img">
                     {% for asset in player.playerImage %}

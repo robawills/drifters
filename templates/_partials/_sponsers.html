@@ -3,7 +3,7 @@
     <div class="grid-container">
         <div class="grid-x  grid-margin-x  sponsers  text-center  align-middle">
             {% for asset in sponsors.sponsors %}
-            <div class="cell  small-6  medium-3  sponsers__item">
+            <div class="cell  small-6  medium-3  sponsers__item"  data-aos="fade-up" data-aos-duration="600">
                 <img src="{{ asset.Url }}" width="{{ asset.getWidth }}" height="{{ asset.getHeight }}"  alt="{{ asset.filename }}">
             </div>
             {% endfor %}
