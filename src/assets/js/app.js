@@ -33,3 +33,8 @@ import aos from './modules/_aos.js';
 $(() => {
     aos();
 });
+
+import map from './modules/_map.js';
+$(() => {
+    map();
+});
