@@ -12,7 +12,7 @@
 
                 {% else %}
 
-                <div class="trans-mid">
+                <div class="trans-mid  hide-for-small-only">
                     {% for asset in entry.image %}
                         <img src="{{ asset.Url }}" width="{{ asset.getWidth }}" height="{{ asset.getHeight }}"  alt="{{ asset.filename }}">
                     {% endfor %}

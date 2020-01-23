@@ -11,8 +11,11 @@
 
     box-shadow: inset 0 1500px 1500px #000000ad;
 
+    margin-top: 3rem;
+
     @include breakpoint (medium) {
         min-height: 95vh;
+        margin-top: 0;
     }
     @include breakpoint (large) {
         min-height: 50rem;
@@ -66,4 +69,5 @@
         width: 100%;
         text-align: left;
     }
+
 }

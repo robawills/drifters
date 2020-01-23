@@ -1,4 +1,10 @@
 .map {
-    height: 35rem;
-    background-color: $dark-gray;
+    height: 25rem;
+
+    @include breakpoint(medium) {
+        height: 30rem;
+    }
+    @include breakpoint(large) {
+        height: 35rem;
+    }
 }

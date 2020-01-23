@@ -1,5 +1,6 @@
 <section class="grid-container">
-    <div class="grid-x  grid-padding"   data-aos="fade-up" data-aos-duration="600">
+
+    <div class="grid-x  grid-padding"  data-aos="fade-up"  data-aos-duration="600">
         <div class="cell  small-12">
             <h1 class="caps  light  gold">Fixtures</h1>
 
@@ -12,9 +13,9 @@
                     
                     <a href="#" class="accordion-title">
                         <ul class="accordion__ul  grid-x  grid-padding-x">
-                            <li class="cell  auto">{{ fixture.month.label }}</li>
-                            <li class="cell  auto">{{fixture.year}}</li>
-                            <li class="cell  auto">{{fixture.numberOfGames}} Matches</li>
+                            <li class="cell  small-shrink  medium-auto  accordion__li">{{ fixture.month.label }}</li>
+                            <li class="cell  small-3  medium-auto  accordion__li">{{fixture.year}}</li>
+                            <li class="cell  small-12  medium-auto  accordion__li">{{fixture.numberOfGames}} Matches</li>
                         </ul>
                     </a>
 
@@ -23,10 +24,10 @@
 
                         <ul class="accordion__ul  accordion__ul--small  grid-x  grid-padding-x  align-justify">
                             
-                            <li class="cell  shrink">
+                            <li class="cell  small-12  medium-shrink">
                                 {{ game.date }} - {{ game.ko }}
                             </li>
-                            <li class="cell  shrink">
+                            <li class="cell  small-12  medium-shrink">
                                 {{ game.homeTeam }}
                                 <span>
                                     
@@ -35,7 +36,7 @@
                                 </span> 
                                 {{ game.awayTeam }}
                             </li>
-                            <li class="cell  shrink">
+                            <li class="cell  small-12  medium-shrink">
                                 {{ game.competition }} 
                             </li>
                         </ul>

@@ -1,11 +1,30 @@
 .list {
-    padding-bottom: 4.5rem;
-    &__item {
-        margin: 4.5rem 0 0;
+    padding-bottom: 2.5rem;
+
+    @include breakpoint(medium) {
+        padding-bottom: 4.5rem;
     }
+
+    &--team {
+        padding-top: 6rem;
+        @include breakpoint(medium) {
+            padding-top: 5rem;
+        }
+    }
+
+    &__item {
+        margin: 3.5rem 0 0;
+        @include breakpoint(medium) {
+            margin: 4.5rem 0 0;
+        }
+    }
+
     &__img {
         background: $light-gray;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
+        @include breakpoint(medium) {
+            margin-bottom: 1.5rem;
+        }
     }
     &__title {
         font-size: 1.25rem;
