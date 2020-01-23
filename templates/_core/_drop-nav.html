@@ -6,6 +6,8 @@
                 {% for entry in craft.entries.section('teams').all() %}
                     <li><a href="{{ entry.url }}" class="drop-nav__a">{{ entry.title }}</a></li>
                 {% endfor %}
+
+                <li><a href="{{ siteUrl }}teams" class="drop-nav__a">View all</a></li>
                 
             </ul>
         </div>
