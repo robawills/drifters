@@ -1,4 +1,4 @@
-<section class="players  hide-for-small-only  bg-white">
+<section class="players  bg-white">
     <div class="grid-container">
         {% if entry.coaches | length %}
         <div class="grid-x  grid-padding-x  align-middle">
@@ -25,8 +25,11 @@
                 <div class="players__padding">
                     <h3 class="gold">GET IN TOUCH</h3>
                     {% for row in entry.contactDetails %}
-                    <p class="players__contact">Email: <a class="black" href="mailto:{{row.coachEmail}}">{{row.coachEmail}}</a></p>
-                    <p class="players__contact  players__contact--m0">Telephone: <a class="black" href="tel:{{row.coachPhone}}">{{row.coachPhone}}</a></p>
+                        <p class="players__contact">Email: <a class="black" href="mailto:{{row.coachEmail}}">{{row.coachEmail}}</a></p>
+                        <p class="players__contact  players__contact--m0">Telephone: <a class="black" href="tel:{{row.coachPhone}}">{{row.coachPhone}}</a></p>
+                        {% if row.training|length %}
+                            <p>Training: {{ row.training }}</p>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </article>
@@ -35,7 +38,7 @@
         {% endif %}
 
         {% if entry.players | length %}
-        <div class="grid-x  grid-padding-x  align-middle">
+        <div class="grid-x  grid-padding-x  align-middle  hide-for-small-only">
 
             {% for player in entry.players %}
             <article class="cell  medium-4"   data-aos="fade-up" data-aos-duration="600">
