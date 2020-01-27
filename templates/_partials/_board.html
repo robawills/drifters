@@ -1,0 +1,44 @@
+<section class="section  history  bg-white  single  black">
+    <div class="grid-container">
+        <div class="grid-x  grid-padding-x">
+            <div class="cell  small-12  medium-11  large-10  reg">
+                
+            </div>
+
+            <div class="cell medium-3">
+                <ul class="vertical tabs" data-tabs id="example-tabs">
+                    <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">History</a></li>
+                    <li class="tabs-title"><a href="#panel2v">Captains</a></li>
+                    <li class="tabs-title"><a href="#panel3v">Honours Board</a></li>
+                    <li class="tabs-title"><a href="#panel4v">1 XV Appearance record</a></li>
+                    <li class="tabs-title"><a href="#panel5v">Player honours</a></li>
+                </ul>
+            </div>
+            <div class="cell medium-9">
+                <div class="tabs-content  black" data-tabs-content="example-tabs">
+                    <div class="tabs-panel is-active" id="panel1v">
+                        <h1 class="h1  caps  history__title  bold">History</h1>
+                        {{ entry.text }}
+                    
+                    </div>
+                    <div class="tabs-panel" id="panel2v">
+                        <h1 class="h1  caps  history__title  bold">Captains</h1>
+                        {{ entry.captains }}
+                    </div>
+                    <div class="tabs-panel" id="panel3v">
+                        <h1 class="h1  caps  history__title  bold">Honours board</h1>
+                        {{ entry.honoursBoard }}
+                    </div>
+                    <div class="tabs-panel" id="panel4v">
+                        <h1 class="h1  caps  history__title  bold">1 XV Appearance record</h1>
+                        {{ entry.caps }}
+                    </div>
+                    <div class="tabs-panel" id="panel5v">
+                        <h1 class="h1  caps  history__title  bold">Player honours</h1>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
