@@ -12,6 +12,10 @@
     <a class="nav__a" href="{{ siteUrl }}contact">Contact</a>
 </li>
 
+<li class="nav__li">
+    <a class="nav__a" href="{{ siteUrl }}history">History</a>
+</li>
+
 {% for entry in craft.entries.section('pages').all() %}
     <li class="nav__li">
         <a href="{{ entry.url }}" class="nav__a">{{ entry.title }}</a>
