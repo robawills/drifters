@@ -20,28 +20,29 @@
 
                 {% endif %}
 
-                <div class="trans-mid">
-
-                    {% if craft.request.getUrl() in urls %}
-                    <h1 class="caps  light  gold  h-intro__title">
-                        <span class="bold">Drifters</span> RFC
-                    </h1>
-                    {% endif %}
-
-                    <p class="h-into__p">{{entry.introduction}}</p>
-                    
-                    {% if craft.request.getUrl() in urls %}
-                        <p><a href="#" class="bold  gold">Read more</a></p>
-                    {% else %}
                 
-                    
-                    <a href="{{ entry.leagueTable }}" target="_blank">
-                        <button class="button  caps">View league table</button>
-                    </a>
-                    
 
-                    {% endif %}
+                {% if craft.request.getUrl() in urls %}
+                <h1 class="caps  light  gold  h-intro__title">
+                    <span class="bold">Drifters</span> RFC
+                </h1>
+                {% endif %}
+
+                <div class="h-intro__p">
+                    {{entry.introduction}}
                 </div>
+                
+                {% if craft.request.getUrl() in urls %}
+                    <a href="{{ siteUrl }}about"><button class="button">Read more</button></a>
+                {% else %}
+            
+                
+                <a href="{{ entry.leagueTable }}" target="_blank">
+                    <button class="button  caps">View league table</button>
+                </a>
+                
+                {% endif %}
+               
             </div>
             {% if craft.request.getUrl() in urls %}
                 {% include "_partials/_home-results" %} 

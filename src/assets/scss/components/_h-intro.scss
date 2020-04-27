@@ -1,11 +1,15 @@
 .h-intro {
+    padding-bottom: 3rem;
     &__sponsers {
         background-color: $white;
         padding: 2rem;
         
     }
     &__p {
-        margin-top: 0;
+        margin-top: 1.5rem;
+        &--basic {
+            margin: 3rem 0;
+        }
     }
     &__title {
         margin-top: 2rem;

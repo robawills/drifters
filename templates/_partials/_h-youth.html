@@ -22,7 +22,7 @@
                         <h1 class="h1  red  light">{{block.blockTitle}}</h1>
                         <p class="reg  black">{{block.blockText}}</p>
                         {% for entry in block.blockLink %}
-                        <a href="{{ entry.url }}" class="h-youth__a  gold  bold">Read more</a>
+                            <a href="{{ entry.url }}"><button class="button">Read more</button></a>
                         {% endfor %}
                     
                 </div>

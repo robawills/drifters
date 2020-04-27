@@ -1,8 +1,8 @@
 {
   "require": {
     "barrelstrength/sprout-forms": "3.5.1",
-    "craftcms/cms": "3.4.5",
-    "craftcms/redactor": "2.5.0",
+    "craftcms/cms": "3.4.17.1",
+    "craftcms/redactor": "2.6.1",
     "ether/simplemap": "3.7.6",
     "verbb/super-table": "2.3.1",
     "vlucas/phpdotenv": "^3.4.0"

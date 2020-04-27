@@ -5,6 +5,7 @@
     transition: all 0.3s;
     border-radius: 0.1rem;
     margin-top: 1rem;
+    text-transform: uppercase;
 
     &--right {
         float: right;
@@ -13,5 +14,6 @@
     &:hover {
         background: $gold;
         color:$black;
+        cursor: pointer;
     }
 }

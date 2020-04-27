@@ -1,6 +1,7 @@
+{% if entry.coaches | length %}
 <section class="players  bg-white">
     <div class="grid-container">
-        {% if entry.coaches | length %}
+        
         <div class="grid-x  grid-padding-x  align-middle">
 
             {% for coach in entry.coaches %}
@@ -58,6 +59,7 @@
             
 
         </div>
-        {% endif %}
+        
     </div>
 </section>
+{% endif %}

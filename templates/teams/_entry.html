@@ -7,7 +7,12 @@
 {% block content %}
 
 {% include "_partials/_hero-s" %} 
-{% include "_partials/_h-intro" %}
+{% if entry.basicLayout %}
+    {% include "_partials/_basic-intro" %}
+{% else %}
+    {% include "_partials/_h-intro" %}
+{% endif %}
+
 {% include "_partials/_fixtures" %}
 {% include "_partials/_players" %}
 
