@@ -1,5 +1,7 @@
 .results {
 
+    animation: 2s ani-in;
+
     &__title {
         margin: 2rem 0 1.5rem;
         @include breakpoint(medium) {
@@ -29,6 +31,12 @@
             padding-left: 2rem;
         }
     }
+  
+}
 
-    
+
+@keyframes ani-in {
+    0% {margin-top: 5rem;opacity: 0;}
+    50% {margin-top: 5rem;opacity: 0;}
+    100% {margin-top: 0;opacity: 1;}
 }

@@ -18,13 +18,11 @@
             <div class="cell  small-12  medium-6 " data-aos="fade-right" data-aos-duration="600">
                 {% for block in entry.section3.type('textBlock').all() %}
                 <div class="h-youth__padding">
-                    
-                        <h1 class="h1  red  light">{{block.blockTitle}}</h1>
-                        <p class="reg  black">{{block.blockText}}</p>
-                        {% for entry in block.blockLink %}
-                            <a href="{{ entry.url }}"><button class="button">Read more</button></a>
-                        {% endfor %}
-                    
+                    <h1 class="h1  red  light">{{block.blockTitle}}</h1>
+                    <p class="reg  black">{{block.blockText}}</p>
+                    {% for entry in block.blockLink %}
+                        <a href="{{ entry.url }}"><button class="button  button--m0">Read more</button></a>
+                    {% endfor %}
                 </div>
                 {% endfor %}
             </div>
