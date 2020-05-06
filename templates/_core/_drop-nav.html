@@ -3,7 +3,7 @@
         <div class="cell  shrink">
             <ul class="menu  align-center  drop-nav__menu">
 
-                {% for entry in craft.entries.section('teams').limit(8) %}
+                {% for entry in craft.entries.section('teams').limit(6) %}
                     <li><a href="{{ entry.url }}" class="drop-nav__a">{{ entry.title }}</a></li>
                 {% endfor %}
 
